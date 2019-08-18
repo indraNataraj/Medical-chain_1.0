@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Patient Record</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container" style="width: 650px;">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center">Patient Record</h1>
+          <hr/>
+          <br/>
+          <div id="loader">
+            <p class="text-center">Loading...</p>
+          </div>
+          <div id="content" style="display: none;">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Disease</th>
+                  <th scope="col">RBCcount</th>
+                  <th scope="col">bpbefore</th>
+                  <th scope="col">bpafter</th>
+                </tr>
+              </thead>
+              <tbody id="patientDetails">
+              </tbody>
+            </table>
+            <hr/>
+            <form  onsubmit="App.val();return false" >
+	             <table cellpadding="2" width="20%"  align="center"cellspacing="2">
+
+		         <tr>
+		        	<td colspan=2>
+			             <center><font size=4><b> Patient Record</b></font></center>
+		              	</td>
+	              	</tr>
+
+
+
+		<tr>
+			<td>Disease</td>
+			<td><input type="text" name="disease" id="named" size="30"></td>
+		</tr>
+
+		<tr>
+			<td>RBCcount</td>
+			<td><input type="text" name="bdrbc" id="bdrb" size="30"></td>
+		</tr>
+    <tr>
+      <td>bp(mm value)</td>
+      <td><input type="text" name="bpm" id="bp" size="30"></td>
+    </tr>
+    <tr>
+      <td>bp(hg value)</td>
+      <td><input type="text" name="bphg" id="id" size="30"></td>
+    </tr>
+
+	</table>
+	<div class="btn" align ="center">
+            <button id="btn1" type="button" align ="center" >
+              create
+            </button>
+
+
+   </div>
+
+</form>
+
+            <p id="accountAddress" class="text-center"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
